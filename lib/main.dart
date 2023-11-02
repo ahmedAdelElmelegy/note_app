@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:notes_app/core/util/style.dart';
 import 'package:notes_app/view/Start/Start.dart';
 
 void main() {
@@ -11,8 +12,10 @@ class NoteApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Start(),
+      theme: Style.themdata(isDark: true, context: context),
     );
   }
 }
